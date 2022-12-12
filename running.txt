@@ -1,0 +1,7 @@
+1) nano filename.sh
+
+2) #!/bin/sh - first line(interpreter )
+
+3) chmod 777 filename.sh (give read/write permission to all user)
+
+4) bash filename.sh

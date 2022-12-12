@@ -1,0 +1,99 @@
+palindrome:
+
+echo "Enter the number"
+read n
+function pal
+{
+number=$n
+reverse=0
+while [ $n -gt 0 ]
+do
+a=`expr $n % 10 `
+n=`expr $n / 10 `
+reverse=`expr $reverse \* 10 + $a`
+done
+echo $reverse
+if [ $number -eq $reverse ]
+then
+    echo "Number is palindrome"
+else
+    echo "Number is not palindrome"
+fi
+}
+r=`pal $n`
+echo "$r"
+
+
+reverse a string:
+// reverse a string using shell script
+// reverse a string is in linux and unix
+
+#!/ bin / bash
+// reading a string
+// using via user input
+read - p "Enter string:" string
+	// getting the length of given string
+	len
+	= $
+{
+	#string
+}
+// looping for reversing a string
+// initialize i=len-1 for reversing a string and run till i=0
+// printing in the reverse order of the given string
+for ((i = $len - 1; i >= 0; i--))
+	do
+	// "${string:$i:1}"extract single character from string.
+	reverse = "$reverse${string:$i:1}" done
+		echo "$reverse"
+
+
+factorial:
+#!/bin/bash
+# Recursive factorial function
+
+factorial()
+{
+    product=$1
+           
+    # Defining a function to calculate factorial using recursion
+    if((product <= 2)); then
+        echo $product
+    else
+        f=$((product -1))
+        
+# Recursive call
+
+f=$(factorial $f)
+f=$((f*product))
+echo $f
+fi
+}
+
+# main program
+# reading the input from user
+echo "Enter the number:"   
+read num
+
+# defining a special case for 0! = 1
+if((num == 0)); then   
+echo 1
+else
+#calling the function
+factorial $num
+fi
+
+prime or not:
+#!/bin/bash
+echo -e "Enter Number : \c"
+read n
+for((i=2; i<=$n/2; i++))
+do
+  ans=$(( n%i ))
+  if [ $ans -eq 0 ]
+  then
+    echo "$n is not a prime number."
+    exit 0
+  fi
+done
+echo "$n is a prime number."
